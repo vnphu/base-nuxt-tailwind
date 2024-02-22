@@ -7,7 +7,7 @@
     </div>
     <div class="flex-auto">
       <label for="withoutgrouping" class="font-bold block mb-2"> Without Grouping </label>
-      <InputNumber v-model="value2" inputId="withoutgrouping" :useGrouping="false" />
+      <InputNumber v-model="value2" inputId="withoutgrouping" :useGrouping="false" size="small" />
     </div>
     <div class="flex-auto">
       <label for="minmaxfraction" class="font-bold block mb-2"> Min-Max Fraction Digits </label>
