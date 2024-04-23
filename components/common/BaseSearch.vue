@@ -39,7 +39,7 @@ const changeValue = (e: Event) => {
   >
     <img class="icon" src="~/assets/icons/i-search.svg" alt="" />
     <input
-      class="flex-1 p-0 text-base font-normal c-gray-50 border-none outline-none bg-transparent"
+      class="flex-1 p-0 text-base font-normal text-gray-500 border-none outline-none bg-transparent"
       type="text"
       :placeholder="placeholder"
       :value="modelValue"

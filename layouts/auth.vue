@@ -23,7 +23,7 @@ watch(
     <div class="flex-1 relative bg-primary-10">
       <div class="flex flex-col gap-[24px]">
         <div class="p-[32px]">
-          <img class="max-w-[132px]" src="~/assets/images/logo.svg" alt="" />
+          <img class="max-h-[56px]" src="~/assets/images/logo.svg" alt="" />
         </div>
 
         <div class="flex-1">

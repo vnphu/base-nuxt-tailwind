@@ -1,7 +1,8 @@
+<script setup lang="ts">
+const router = useRouter()
+// router.push('/home')
+</script>
+
 <template>
-  <div> <Password /> </div>
+  <div class="page"> </div>
 </template>
-
-<script setup lang="ts"></script>
-
-<style scoped></style>

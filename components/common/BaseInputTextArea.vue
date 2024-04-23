@@ -8,30 +8,30 @@ const props = defineProps({
   },
   modelValue: {
     type: [String, null] as PropType<String | null>,
-    required: true
+    required: true,
   },
   placeholder: {
     type: String,
-    default: 'Enter'
+    default: 'Enter',
   },
   label: {
     type: String,
   },
   styleInput: {
     type: Object,
-    default: () => ({})
+    default: () => ({}),
   },
   classInput: {
     type: [String, Object, Array],
-    default: ''
+    default: '',
   },
   rules: {
     type: Object,
-    default: () => ({})
+    default: () => ({}),
   },
   disabled: {
     type: Boolean,
-    required: false
+    required: false,
   },
 })
 
@@ -43,19 +43,26 @@ const { value, errorMessage, handleBlur } = useField(() => props.name, rules, {
   initialValue: props.modelValue as string,
   syncVModel: true,
 })
-
 </script>
 
 <template>
   <div class="flex flex-col gap-2">
-    <label class="text-base font-normal c-black-90" :for="props.name" v-if="label">
-      {{ label }} <span class="c-danger" v-if="rules.required">*</span>
+    <label class="text-base font-normal text-black-900" :for="props.name" v-if="label">
+      {{ label }} <span class="text-red-500" v-if="rules.required">*</span>
     </label>
 
     <div class="flex flex-col">
-      <Textarea :id="props.name" :class="[classInput, errorMessage ? 'p-invalid' : '']" :style="styleInput"
-        :placeholder="placeholder" rows="5" autoResize v-model="value" @blur="handleBlur($event, true)"
-        :disabled="disabled" />
+      <Textarea
+        :id="props.name"
+        :class="[classInput, errorMessage ? 'p-invalid' : '']"
+        :style="styleInput"
+        :placeholder="placeholder"
+        rows="5"
+        autoResize
+        v-model="value"
+        @blur="handleBlur($event, true)"
+        :disabled="disabled"
+      />
       <small class="p-error" v-show="errorMessage">{{ errorMessage || '&nbsp;' }}</small>
     </div>
   </div>

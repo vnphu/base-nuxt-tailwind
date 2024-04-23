@@ -21,7 +21,7 @@ const MENU_SETTING = computed(() => [
     key: 'logout',
     title: 'Logout',
     icon: iLogout,
-    classTitle: '!c-danger',
+    classTitle: '!text-red-500',
     onClick: () => {
       $auth.logout().then(() => {
         closeUserPanel()
@@ -75,12 +75,12 @@ const goAccountManagement = () => {
       <div class="py-[8px] px-[16px] flex items-center gap-3">
         <BaseAvatar :url="$auth?.user?.avatar?.original_url || AvatarDefault" type="circle" />
         <div class="flex-1 flex flex-col">
-          <span class="text-base font-semibold c-gray-50 line-clamp-1">{{ $auth?.user?.name }} </span>
-          <span class="text-xs font-normal c-gray-50 line-clamp-1">{{ $auth?.user?.email }}</span>
+          <span class="text-base font-semibold text-gray-500 line-clamp-1">{{ $auth?.user?.name }} </span>
+          <span class="text-xs font-normal text-gray-500 line-clamp-1">{{ $auth?.user?.email }}</span>
         </div>
       </div>
 
-      <!-- <Button class="mb-[16px] mx-[16px] bg-primary-10 border-transparent text-sm c-white rounded-lg 
+      <!-- <Button class="mb-[16px] mx-[16px] bg-primary-10 border-transparent text-sm text-white rounded-lg 
        " style="width: -webkit-fill-available;" label="Account management" @click="goAccountManagement" /> -->
 
       <ul class="">
@@ -91,7 +91,7 @@ const goAccountManagement = () => {
           @click="item?.onClick"
         >
           <img class="w-24px h-24px" :src="item.icon" :alt="item.icon" />
-          <span class="text-base c-gray-50 capitailize" :class="item.classTitle">{{ item.title }}</span>
+          <span class="text-base text-gray-500 capitailize" :class="item.classTitle">{{ item.title }}</span>
         </li>
       </ul>
     </OverlayPanel>

@@ -32,10 +32,10 @@ const breadCrumb = computed(() => {
 <template>
   <div class="mb-[24px] flex gap-[8px]">
     <template v-for="(item, index) in breadCrumb" :key="item?.path">
-      <span class="text-sm font-normal c-black-60" v-if="index > 0"> / </span>
+      <span class="text-sm font-normal text-black-600" v-if="index > 0"> / </span>
       <nuxt-link
         class="text-sm font-normal no-underline"
-        :class="$route.path === item?.path ? ['c-primary'] : ['c-black-60']"
+        :class="$route.path === item?.path ? ['text-primary-500'] : ['text-black-600']"
         :to="item?.path"
       >
         {{ item?.title }}

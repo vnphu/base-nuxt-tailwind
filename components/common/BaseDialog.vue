@@ -45,7 +45,7 @@ const closeDialog = () => {
     <button class="absolute top-[16px] right-[16px]" type="button" @click="closeDialog" v-if="showIconClose">
       <img src="~/assets/icons/i-close-gray.svg" alt="" />
     </button>
-    <h3 class="mb-3 text-2xl font-bold c-black-90 text-center" v-if="title">
+    <h3 class="mb-3 text-2xl font-bold text-black-900 text-center" v-if="title">
       {{ title }}
     </h3>
     <slot></slot>

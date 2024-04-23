@@ -7,33 +7,23 @@ const { $auth } = useNuxtApp()
 
 const navLinks = ref([
   {
-    title: 'Plans',
-    to: '/plans',
+    title: 'Danh mục',
+    to: '/category',
     isAuth: true,
   },
   {
-    title: 'About',
-    to: '/about',
+    title: 'Guides',
+    to: '/guide',
     isAuth: false,
   },
   {
-    title: 'Glossary',
-    to: '/glossary',
+    title: 'Images',
+    to: '/image',
     isAuth: false,
   },
   {
-    title: 'Blog',
-    to: '/blog',
-    isAuth: false,
-  },
-  {
-    title: 'Pricing',
-    to: '/pricing',
-    isAuth: false,
-  },
-  {
-    title: 'Contact',
-    to: '/contact',
+    title: 'Donate',
+    to: '/donate',
     isAuth: false,
   },
 ])
@@ -87,7 +77,7 @@ onBeforeUnmount(() => {
             <template v-for="item in navLinks" :key="item?.to">
               <li v-if="!item?.isAuth || (item?.isAuth && $auth?.user?.id)">
                 <nuxt-link
-                  class="block p-[16px] text-base font-normal c-gray-50 transition-all [&.router-link-active]:c-primary [&.router-link-active]:font-semibold lg:p-[0]"
+                  class="block p-[16px] text-base font-normal text-gray-500 transition-all [&.router-link-active]:text-primary-500 [&.router-link-active]:font-semibold lg:p-[0]"
                   :to="item?.to"
                 >
                   {{ item?.title }}

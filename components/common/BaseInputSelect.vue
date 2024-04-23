@@ -83,9 +83,9 @@ watch(
 
 <template>
   <div class="flex flex-col gap-2">
-    <label class="text-base font-normal c-black-90" :for="props.name" v-if="label">
+    <label class="text-base font-normal text-black-900" :for="props.name" v-if="label">
       {{ label }}
-      <span class="c-danger" v-if="rules.required">*</span>
+      <span class="text-red-500" v-if="rules.required">*</span>
     </label>
 
     <div class="flex flex-col">

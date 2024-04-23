@@ -74,14 +74,14 @@ const { value, errorMessage, handleBlur } = useField(() => props.name, rules, {
 <template>
   <div class="flex flex-col gap-2">
     <label
-      class="flex items-center gap-[8px] text-base font-normal c-black-90"
+      class="flex items-center gap-[8px] text-base font-normal text-black-900"
       :class="layout === 'row' ? ['flex-1'] : ['']"
       :for="props.name"
       v-if="label"
     >
       <span>
         {{ label }}
-        <span class="c-danger" v-if="rules.required">*</span>
+        <span class="text-red-500" v-if="rules.required">*</span>
       </span>
     </label>
 
